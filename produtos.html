@@ -21,7 +21,11 @@
         
         <!-- Custom styles for this template -->
         <link href="product.css" rel="stylesheet">
-      </head>
+    <script>
+      function add_carrinho(nome_produto){
+        localStorage.setItem("carrinho", [nome_produto])
+      }
+    </script>
 </head>
 <body>
     <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -207,6 +211,7 @@ navigation">
           <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
           <li class="nav-item"><a class="nav-link" href="informacoes.html">Informações</a></li>
           <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrinho.html">Contato</a></li>
             <svg class="bi" width="24" height="24"><use xlink:href="#cart"></use></svg>
           </a></li>
         </ul>
@@ -232,16 +237,19 @@ navigation">
   <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
       <h2 class="display-5">Versão Vítima</h2>
-      <p class="lead">
-        Pulseira de rastreamento que monitora constantemente a distância relativa entre vítima e agressor contendo os seguintes mecanismos de defesa: envio de alerta em casos onde o agressor viola distância mínima da medida protetiva por um período de tempo significativo; botão de emergência que aciona polícia enviando localização em tempo real de ambas as partes.
-        Conta também com design discreto, não expondo a vítima. 
+      <p  class="lead" align="center">
+        Pulseira de rastreamento que monitora constantemente a distância relativa entre vítima  <br> e agressor contendo os seguintes mecanismos de defesa: envio de alerta em casos onde o agressor viola distância mínima   <br>da medida protetiva por um período de tempo significativo; botão de emergência que   <br>aciona polícia enviando localização em tempo real de ambas as partes.
+        <br>Conta também com design discreto, não expondo a vítima. 
         <br>
-        <img src="pulseiraPrata.png" alt="">
-      
+       
+        <img src="PulseiraPrata2.png" alt=""width="650" height="500">
+        
+       
       </p>
+      <button onclick="add_carrinho('pulseira_prata')" type="button" class="btn btn-outline-dark btn-lg px-4">COMPRAR</button>
       
     </div>
-  
+    
 </div> 
 
  <div class="b-example-divider"></div>
@@ -253,6 +261,8 @@ navigation">
         Possui design discreto e tecnologia de ponta que bloqueia a retirada e emite alerta as forças políciais se retirada.
     <br>
     <img src="pulseiraPreta.png" alt=""></p>
+    <button onclick="add_carrinho('pulseira_preta')" type="button" class="btn btn-outline-dark btn-lg px-4">COMPRAR</button>
+    
     </div>
     
 </div> 
